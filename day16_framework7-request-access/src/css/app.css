@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.minimalist-page {
+  background-color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.minimalist-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.minimalist-block {
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.minimalist-button {
+  margin-top: 10px;
+  background-color: #152c5b;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.minimalist-button:hover {
+  background-color: #005bb5;
+}
+
+.camera-output-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.camera {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.camera video {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+}
+
+.output img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.camera video,
+.output img {
+  max-height: 400px;
+}
+

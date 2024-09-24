@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Session 3</title>
+    <style>
+      body {
+        font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      .header {
+        background-color: #2b6777;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        background-color: #fff;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 40%;
+        margin-bottom: 30px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      button {
+        background-color: #2b6777;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 20px;
+        align-self: center;
+      }
+
+      button:hover {
+        background-color: #1a4755;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #2b6777;
+        color: white;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      .footer p {
+        margin: 0;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Selamat Datang di Website Apa Adanya :)</h1>
+    </div>
+
+    <div class="content">
+      <div class="card">
+        <h2>Manipulasi String</h2>
+        <p>Di sini Anda dapat melihat contoh manipulasi string menggunakan metode JavaScript seperti `toUpperCase()`, `toLowerCase()` dan `replace()`. Manipulasi string ini memungkinkan kita untuk merubah format teks sesuai kebutuhan.</p>
+        <button onclick="manipulasiString()">Coba String</button>
+      </div>
+
+      <div class="card">
+        <h2>Metode Array</h2>
+        <p>Array adalah salah satu struktur data yang paling berguna dalam JavaScript. Anda bisa menambahkan, menghapus, dan memanipulasi data dengan berbagai metode seperti `push()`, `pop()`, dan `join()`.</p>
+        <button onclick="manipulasiArray()">Coba Array</button>
+      </div>
+
+      <div class="card">
+        <h2>Arrow Function</h2>
+        <p>Arrow function adalah cara singkat untuk menulis fungsi dalam JavaScript. Ini sering digunakan untuk menulis kode yang lebih ringkas dan mudah dipahami dalam berbagai operasi JavaScript.</p>
+        <button onclick="arrowFunction()">Coba Arrow Function</button>
+      </div>
+
+      <div class="card">
+        <h2>Object Conditional</h2>
+        <p>Object conditional digunakan untuk mengecek kondisi pada objek secara dinamis. Di sini kita dapat mengetahui status dari properti tertentu.</p>
+        <button onclick="cekObject()">Coba Object Conditional</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 - Dibuat dengan hati dan detail. Semua hak cipta dilindungi.</p>
+    </div>
+
+    <script>
+      // 1. Manipulasi String
+      function manipulasiString() {
+        let string = "Halo, Maxians!";
+        let upperCase = string.toUpperCase();
+        let lowerCase = string.toLowerCase();
+        let replacedString = string.replace("Maxians", "Developer");
+        alert(`Original: ${string}\nUppercase: ${upperCase}\nLowercase: ${lowerCase}\nReplaced: ${replacedString}`);
+      }
+
+      // 2. Metode Array
+      function manipulasiArray() {
+        let Fruits = ["Nanas", "Pisang", "Anggur"];
+        Fruits.push("Durian"); // Tambah elemen
+        let result = Fruits.join(", "); // Gabung jadi string
+        alert(`Array Fruits: ${result}`);
+      }
+
+      // 3. Arrow Function
+      const arrowFunction = () => {
+        let number = 7;
+        let kuadrat = number => number * number; // Arrow function untuk kuadrat
+        alert(`Kuadrat dari ${number} adalah ${kuadrat(number)}`);
+      };
+
+      // 4. Object Conditional
+      function cekObject() {
+        let person = {
+          name: "John",
+          age: 25,
+          isStudent: true
+        };
+
+        // Conditional check
+        let status = person.isStudent ? "Mahasiswa terdeteksi!" : "Bukan mahasiswa!";
+        alert(`Status: ${status}`);
+      }
+    </script>
+  </body>
+</html>

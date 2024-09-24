@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript & jQuery</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      .header {
+        background-color: #2b6777;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 2.3em;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+
+      .main {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        background-color: #fff;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 40%;
+        margin-bottom: 30px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      h3 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      button {
+        background-color: #2b6777;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 20px;
+        align-self: center;
+      }
+
+      button:hover {
+        background-color: #1a4755;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 1.1em;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s;
+      }
+
+      input[type="number"]:focus {
+        border-color: #2b6777;
+        outline: none;
+      }
+
+      #result,
+      #ageResult {
+        font-size: 1.2em;
+        color: #2b6777;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .fruitList {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .fruitItem {
+        background-color: #e0f7fa;
+        border: 1px solid #00796b;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin: 5px;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #2b6777;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        bottom: 0;
+      }
+
+      .footer p {
+        color: white;
+        margin: 0;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Javascript & jQuery</h1>
+    </div>
+
+    <div class="main">
+      <div class="card">
+        <h3>Memanipulasi Teks</h3>
+        <p>Dengan jQuery, Anda dapat mengubah teks elemen dengan mudah. Coba ubah teks ini dengan mengklik tombol di bawah ini.</p>
+        <button id="changeText">Ubah Teks</button>
+      </div>
+
+      <div class="card">
+        <h3>Daftar Buah</h3>
+        <p>Tambahkan buah ke dalam daftar dengan mengklik tombol di bawah ini.</p>
+        <button id="addFruit">Tambah Buah</button>
+        <div class="fruitList" id="fruitList"></div>
+      </div>
+
+      <div class="card">
+        <h3>Kalkulator Sederhana</h3>
+        <p>Ketik dua angka dan tekan tombol untuk melihat hasil penjumlahannya.</p>
+        <input type="number" id="num1" placeholder="Angka 1" />
+        <input type="number" id="num2" placeholder="Angka 2" />
+        <button id="calculate">Hitung</button>
+        <p id="result">Hasil:</p>
+      </div>
+
+      <div class="card">
+        <h3>Pengecekan Usia</h3>
+        <p>Cek apakah usia yang diinput sudah memenuhi syarat sebagai orang dewasa.</p>
+        <input type="number" id="ageInput" placeholder="Masukkan usia" />
+        <button id="checkAge">Cek Usia</button>
+        <p id="ageResult"></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 jQuery Website</p>
+    </div>
+
+    <script>
+      const fruits = ["Apel", "Pisang", "Jeruk", "Mangga", "Anggur", "Durian", "Nanas", "Kiwi", "Strawberry", "Semangka"];
+
+      // 1. Memanipulasi teks
+      let teksAsli = $("p:first").text(); // Simpan teks asli
+      console.log("Teks asli:", teksAsli);
+
+      $("#changeText").click(function () {
+        console.log("Tombol Ubah Teks diklik.");
+        if ($(this).text() === "Ubah Teks") {
+          $("p:first").text("Teks berhasil diubah!");
+          $(this).text("Kembali Semula");
+          console.log("Teks diubah.");
+        } else {
+          $("p:first").text(teksAsli); // Kembalikan teks
+          $(this).text("Ubah Teks");
+          console.log("Teks dikembalikan.");
+        }
+      });
+
+      // 2. Tambah buah ke daftar
+      $("#addFruit").click(function () {
+        const randomIndex = Math.floor(Math.random() * fruits.length);
+        const fruitsName = fruits[randomIndex];
+        $("#fruitList").append(`<span class="fruitItem">${fruitsName}</span>`);
+        console.log("Buah ditambahkan:", fruitsName);
+      });
+
+      // 3. Kalkulator sederhana
+      $("#calculate").click(function () {
+        let num1 = parseFloat($("#num1").val());
+        let num2 = parseFloat($("#num2").val());
+        console.log("Angka 1:", num1, "Angka 2:", num2);
+        if (!isNaN(num1) && !isNaN(num2)) {
+          let result = num1 + num2;
+          $("#result").text("Hasil: " + result);
+          console.log("Hasil penjumlahan:", result);
+        } else {
+          $("#result").text("Masukkan angka yang valid!");
+          console.log("Input tidak valid.");
+        }
+      });
+
+      // 4. Cek usia
+      $("#checkAge").click(function () {
+        let age = parseInt($("#ageInput").val());
+        console.log("Usia yang dimasukkan:", age);
+        if (!isNaN(age)) {
+          if (age >= 18) {
+            $("#ageResult").text("Anda sudah dewasa.");
+            console.log("Pengguna dewasa.");
+          } else {
+            $("#ageResult").text("Anda masih di bawah umur.");
+            console.log("Pengguna masih di bawah umur.");
+          }
+        } else {
+          $("#ageResult").text("Masukkan usia yang valid!");
+          console.log("Input usia tidak valid.");
+        }
+      });
+    </script>
+  </body>
+</html>

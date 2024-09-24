@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      #button {
+        background-color: #152c5b;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contoh" info="nilai">tes <span>ini span</span></div>
+    <div class="kelas">ini kelas</div>
+    <div id="button">click me</div>
+    <script>
+      $(() => {
+        console.log($("#contoh").text());
+        console.log($("#contoh").html());
+        console.log($(".kelas").text());
+        console.log($(".kelas").html());
+        $("#button").click(() => {
+          alert("aku di klik");
+          $("#button").hide(1000, () => {
+            alert("Button telah disembunyikan");
+          });
+        });
+        $("#contoh").attr("halo", "maxians");
+        console.log($("#contoh").attr("info"));
+        $("#contoh").removeAttr("info", "");
+        $("#button").html("tekan button ini");
+        document.cookie = "Test cookie";
+        console.log(document.cookie);
+      });
+    </script>
+  </body>
+</html>

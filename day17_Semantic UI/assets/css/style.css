@@ -1,0 +1,160 @@
+.ui.menu,
+.ui.container,
+.ui.header,
+.ui.button,
+.ui.card .header,
+.ui.card .description,
+.ui.footer.segment {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.navbar-icon {
+  width: 10px;
+  height: 70px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+a span {
+  color: #f1b04c;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+}
+
+.ui.menu .header.item {
+  font-size: 2rem;
+  color: #152c5b;
+}
+
+/* Dropdown */
+.ui.simple.dropdown .menu.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.ui.simple.dropdown:hover .menu.dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.ui.simple.dropdown .menu.dropdown-menu .item {
+  color: #152c5b;
+}
+
+/* Hero Section */
+.hero-section {
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
+}
+
+.hero-section .text-content h1 {
+  font-size: 3.5rem;
+  color: #152c5b;
+  margin-bottom: 1rem;
+}
+
+.hero-section .text-content p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .button-content a {
+  font-size: 1.2rem;
+}
+
+.hero-section .card-image img {
+  max-width: 100%;
+}
+
+/* Book Section */
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.ui.container.section-padding h2 {
+  color: #152c5b;
+}
+
+.ui.four.cards .card {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.ui.four.cards .card .image img {
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.ui.rating {
+  margin-top: 10px;
+}
+
+/* Cards Book Section */
+.ui.four.cards .card {
+  transition: transform 0.3s ease;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.ui.four.cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ui.four.cards .card .content .header {
+  color: #152c5b;
+  font-size: 1.4rem;
+}
+
+.ui.four.cards .card .description {
+  font-size: 1.1rem;
+  color: #152c5b;
+  margin-top: 10px;
+}
+
+.ui.bottom.attached.button:hover {
+  background-color: #152c5b;
+  color: white;
+}
+
+/* Testimonial Section */
+.ui.raised.segment {
+  padding: 30px;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  color: #152c5b;
+}
+
+/* Footer */
+.ui.inverted.vertical.footer.segment {
+  padding: 60px 0;
+  background-color: #152c5b;
+}
+
+.ui.footer.segment .ui.header {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.ui.footer.segment .ui.link.list a.item {
+  color: #d1d5db;
+}
+
+.ui.footer.segment .ui.link.list a.item:hover {
+  color: #ffffff;
+}

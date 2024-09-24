@@ -1,0 +1,18 @@
+{
+  "cwd": "D:\\MSIB\\DAY 16\\framework7-day16",
+  "type": [
+    "web"
+  ],
+  "name": "day_16",
+  "framework": "react",
+  "template": "tabs",
+  "cssPreProcessor": false,
+  "bundler": "vite",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}

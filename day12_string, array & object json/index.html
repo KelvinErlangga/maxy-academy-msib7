@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String to JSON Converter</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .app-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+      }
+
+      .converter {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: #152c5b;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-size: 16px;
+        color: #152c5b;
+        margin-bottom: 12px;
+      }
+
+      textarea {
+        width: calc(100% - 20px);
+        height: 100px;
+        padding: 12px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        font-size: 16px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+
+      button {
+        padding: 12px 20px;
+        background-color: #152c5b;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      pre {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="converter">
+        <h1>Array to JSON</h1>
+        <div class="input-group">
+          <label for="stringInput">Masukkan String (pisahkan dengan koma):</label>
+          <textarea id="stringInput" placeholder="Example: Innova Zenix, Mazda cx-9, Ioniq 5"></textarea>
+        </div>
+        <button id="convertBtn">Convert to JSON</button>
+        <pre id="result"></pre>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("convertBtn").addEventListener("click", function () {
+        const stringInput = document.getElementById("stringInput").value;
+        const resultDiv = document.getElementById("result");
+
+        try {
+          // Mengonversi string input menjadi array
+          const array = stringInput.split(",").map((item) => item.trim());
+          // Mengonversi array menjadi objek dengan indeks array sebagai kunci
+          const arrayObject = Object.assign({}, array);
+          // Mengonversi objek menjadi string JSON
+          const jsonString = JSON.stringify(arrayObject, null, 2);
+          // Menampilkan string JSON di elemen hasil
+          resultDiv.textContent = jsonString;
+        } catch (error) {
+          resultDiv.textContent = "Error: " + error.message;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.write("Hi, Head Tag");
+    </script>
+  </head>
+  <body>
+    <h1 id="tag">
+      <div>tes</div>
+      Tag H1
+    </h1>
+    <div class="kelas">Ini contoh isi dalam kelas</div>
+    <div id="data">Tulisan acak-Acakan</div>
+    <button onclick="reload()">Reload</button>
+    <button onclick="upperCase()">Upper Case</button>
+    <button onclick="lowerCase()">Lower Case</button>
+    <script src="eksternal.js"></script>
+    <script>
+      console.log(document.getElementById("tag").innerHTML);
+      console.log(document.getElementById("tag").innerText);
+      console.log(document.getElementsByClassName("kelas"));
+      console.log("Ini untuk debug", "keterangan lain");
+      document.write("<h1>Hi, Body Tag</h1>");
+      function reload() {
+        window.location.reload();
+      }
+      function bootstrap() {
+        window.location = "../bootstrap.html";
+      }
+      function namafungsi() {
+        document.write("tambah data dari fungsi");
+      }
+      function banyakchar(tulisan) {
+        console.log(tulisan.length);
+      }
+      function gantiTulisan(tulisan, asal, ganti) {
+        console.log(tulisan.replace(asal, ganti));
+      }
+      function upperCase() {
+        var data = document.getElementById("data");
+        document.getElementById("data").innerHTML = data.innerHTML.toUpperCase(data);
+      }
+      function lowerCase() {
+        var data = document.getElementById("data");
+        document.getElementById("data").innerHTML = data.innerHTML.toLowerCase(data);
+      }
+
+      banyakchar("Test1234567890");
+      gantiTulisan("Test1234567890", "Test", "Ada");
+      namafungsi();
+      var dataTulisan = "string";
+      var kumpulanData = ["data 1", "data 2", "data 3"];
+      var objectdata = {
+        key1: "value",
+        key2: "value",
+      };
+      function gabungData() {
+        var data = kumpulanData.join(",");
+        console.log(data);
+      }
+      function pisahData() {
+        var data = "satu,dua,tiga";
+        var arrayData = data.split(",");
+        console.log(arrayData);
+      }
+      gabungData();
+      pisahData();
+      var fungsianonim = () => {};
+      document.write("Anonim fungsi");
+      fungsianonim();
+    </script>
+  </body>
+</html>
