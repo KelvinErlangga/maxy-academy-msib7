@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPT | Home Page</title>
+    <link rel="icon" href="assets/images/logo_white.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="bg-[#285369] text-white py-2 mb-4" id="top-bar">
+      <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <div class="text-xs sm:text-sm"><strong>Info: </strong>Happy New Year 2024!</div>
+        <div class="flex space-x-4">
+          <a href="#" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="#" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+          <a href="#" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin-in fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End of Top Bar -->
+
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-white text-black px-4 py-2 shadow-sm w-full z-50">
+      <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center space-x-4 sm:space-x-6">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="SPT Logo" class="h-16 w-auto mr-8" />
+          </a>
+          <!-- Navigation Links -->
+          <ul class="hidden sm:flex space-x-4 sm:space-x-6 font-bold">
+            <!-- Added ml-6 for margin -->
+            <li><a href="#" class="hover:text-blue-400">Home</a></li>
+            <li class="relative group">
+              <button class="hover:text-blue-400 flex items-center">Organization <span class="ml-1">&#x25BE;</span></button>
+              <!-- Dropdown -->
+              <ul class="absolute hidden group-hover:block bg-white text-gray-800 rounded shadow-lg z-20 min-w-max">
+                <li><a href="organization/vision_mission.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Vision and Mission</a></li>
+                <li><a href="organization/value.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Value</a></li>
+              </ul>
+            </li>
+            <li class="relative group">
+              <button class="hover:text-blue-400 flex items-center">Service <span class="ml-1">&#x25BE;</span></button>
+              <!-- Dropdown -->
+              <ul class="absolute hidden group-hover:block bg-white text-gray-800 rounded shadow-lg z-20 min-w-max">
+                <li><a href="service/management.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Management</a></li>
+                <li><a href="service/information_technology.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Information Technology</a></li>
+                <li><a href="service/academy.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Academy</a></li>
+                <li><a href="service/infrastructure.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Infrastructure</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="hover:text-blue-400">Career</a></li>
+            <li><a href="#" class="hover:text-blue-400">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- WhatsApp Contact -->
+        <div class="text-xs sm:text-sm flex items-center ml-4">
+          <a href="https://wa.me/6282244806395" class="hover:text-blue-500 flex items-center">
+            <i class="fab fa-whatsapp fa-lg mr-1"></i>
+            WhatsApp 24/7
+          </a>
+          <div class="font-bold ml-2">(6282244806395)</div>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Hero Section -->
+    <section class="bg-white mb-20 py-10 sm:py-14 fade-in" style="padding-top: 80px">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div class="max-w-lg mb-8 lg:mb-0">
+          <p class="text-[#285369] mb-8">PT. SINERGI PRIMA TEKNOLOGI</p>
+          <h1 class="text-3xl sm:text-5xl font-bold text-gray-800 mb-14">
+            Build Your Dream <br />
+            <span class="font-medium">Apps and Systems</span>
+          </h1>
+          <p class="text-gray-500 mb-20">We transform businesses of most major sectors with powerful and adaptable digital solutions.</p>
+          <a href="#" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-[#285369]">Our Works</a>
+        </div>
+        <div>
+          <img src="assets/images/hero.png" alt="Team Working" class="w-full" loading="lazy" />
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero Section -->
+
+    <!-- Services Section -->
+    <section class="py-10 sm:py-16 bg-gray-100 fade-in">
+      <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">Perfect IT Solutions <span class="font-medium">For Your Business</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Item -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">IT Consultation</h3>
+            <p class="text-gray-600">We help businesses eliminate workflow pain points, implement new tech, and more.</p>
+          </div>
+          <!-- Service Item -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">Data Security</h3>
+            <p class="text-gray-600">We ensure secure data management to protect your business's critical assets.</p>
+          </div>
+          <!-- Service Item -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">Website Development</h3>
+            <p class="text-gray-600">Our team builds responsive and powerful websites tailored to your needs.</p>
+          </div>
+          <!-- Service Item -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">UI/UX Design</h3>
+            <p class="text-gray-600">We help businesses eliminate workflow pain points, implement new tech, and more.</p>
+          </div>
+          <!-- Service Item -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">Cloud Services</h3>
+            <p class="text-gray-600">We ensure secure data management to protect your business's critical assets.</p>
+          </div>
+          <!-- Service Item -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">Mobile Development</h3>
+            <p class="text-gray-600">Our team builds responsive and powerful websites tailored to your needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Services Section -->
+
+    <!-- Portfolio Section -->
+    <section class="py-10 sm:py-16 bg-white fade-in">
+      <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">Latest Projects <span class="font-medium">From Our Team</span></h2>
+        <div class="relative">
+          <!-- Carousel Wrapper -->
+          <div id="carousel" class="flex space-x-8 overflow-hidden">
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project1.jpg" alt="Project 1" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 1 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project2.jpg" alt="Project 2" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 2 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project3.jpg" alt="Project 3" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 3 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project3.jpg" alt="Project 4" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 4 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project3.jpg" alt="Project 5" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 5 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project3.jpg" alt="Project 6" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 6 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project3.jpg" alt="Project 7" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 7 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+            <div class="min-w-[30%] bg-gray-100 p-6 sm:p-8 rounded-lg shadow-lg">
+              <img src="assets/images/project3.jpg" alt="Project 8" class="mb-4 rounded-lg" />
+              <h3 class="text-lg sm:text-xl font-semibold">Project 8 Title</h3>
+              <p class="text-gray-600">Short project description here.</p>
+            </div>
+          </div>
+          <!-- Left Arrow -->
+          <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-700">←</button>
+          <!-- Right Arrow -->
+          <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-700">→</button>
+        </div>
+      </div>
+    </section>
+    <!-- End of Portfolio Section -->
+
+    <!-- Testimonials Section -->
+    <section class="py-10 sm:py-16 bg-gray-100 fade-in">
+      <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">The Trust <span class="font-medium">From Clients</span></h2>
+        <div class="flex flex-col sm:flex-row sm:justify-center space-y-8 sm:space-y-0 sm:space-x-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <img src="assets/images/me2.jpg" alt="Client 1" class="w-16 h-16 rounded-full mx-auto mb-4" />
+            <p class="text-gray-600">"SPT provided excellent IT consultation services that really helped streamline our operations."</p>
+            <h3 class="text-lg font-semibold mt-4">Kelvin</h3>
+            <span class="text-gray-500 text-sm">CEO, ExampleCorp</span>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <img src="assets/images/karina.jpg" alt="Client 2" class="w-16 h-16 rounded-full mx-auto mb-4" />
+            <p class="text-gray-600">"The team at SPT exceeded our expectations with their cloud solutions."</p>
+            <h3 class="text-lg font-semibold mt-4">Karina Afsha</h3>
+            <span class="text-gray-500 text-sm">CTO, TechnoSoft</span>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 sm:p-8 shadow-lg rounded-lg">
+            <img src="assets/images/me.jpg" alt="Client 3" class="w-16 h-16 rounded-full mx-auto mb-4" />
+            <p class="text-gray-600">"Their mobile development team is top-notch and delivered great results."</p>
+            <h3 class="text-lg font-semibold mt-4">Erlangga</h3>
+            <span class="text-gray-500 text-sm">Product Manager, MobileWorks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Testimonials Section -->
+
+    <!-- Contact Form -->
+    <section class="py-10 sm:py-16 bg-[#285369] text-white fade-in">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Request Free <span class="font-medium">Consultancy</span></h2>
+
+        <!-- Layout Wrapper for Contact Information and Form -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Contact Information (Left side) -->
+          <div class="text-white p-6 sm:p-8 rounded-lg">
+            <h3 class="text-xl font-bold">Contact Information</h3>
+            <p class="mb-4">Feel free to contact us through any of the following ways.</p>
+            <div class="mb-4">
+              <h4 class="text-lg">Hotline 24/7</h4>
+              <p class="font-bold">(6282244806395)</p>
+            </div>
+            <div class="mb-4">
+              <h4 class="text-lg"><span class="font-bold">Address:</span> Surabaya, Jawa Timur</h4>
+            </div>
+            <div class="mb-4">
+              <h4 class="text-lg"><span class="font-bold">Email:</span> admin@sptechnology.com</h4>
+            </div>
+            <div class="mb-4">
+              <h4 class="text-lg"><span class="font-bold">Work Hour:</span> Mon - Sat: 9:00 - 17:00</h4>
+            </div>
+          </div>
+
+          <!-- Contact Form (Right side) -->
+          <div class="bg-white text-gray-900 p-6 sm:p-8 rounded-lg shadow-lg">
+            <form action="#" method="POST">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="w-full p-2 border rounded-lg" />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border rounded-lg" />
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700">Your Inquiry</label>
+                <textarea id="message" name="message" class="w-full p-2 border rounded-lg"></textarea>
+              </div>
+              <button type="submit" class="bg-black text-white px-6 py-2 rounded-lg hover:bg-[#285369]">Request Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Contact Form -->
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Company Information -->
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <a href="index.html">
+              <img src="assets/images/logo_white.png" alt="SPT Logo" class="h-8 w-auto" />
+            </a>
+            <h2 class="text-xl font-bold">SPT</h2>
+          </div>
+          <p class="text-gray-400 mb-6">We transform businesses of most major sectors with powerful and adaptable digital solutions that satisfy the needs of today.</p>
+          <ul class="text-gray-400 space-y-2 mb-6">
+            <li class="flex items-center"><span class="mr-2">📍</span> Surabaya, Jawa Timur</li>
+            <li class="flex items-center"><span class="mr-2">✉️</span> admin@sptechnology.com</li>
+            <li class="flex items-center"><span class="mr-2">📞</span> 6281222002253</li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Services</h3>
+          <ul class="space-y-2 mb-6">
+            <li><a href="#" class="text-gray-400 hover:text-gray-200">Management</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gray-200">Information Technology</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gray-200">Academy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gray-200">Infrastructure</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 mb-6">
+            <li><a href="#" class="text-gray-400 hover:text-gray-200">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gray-200">Career</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-gray-200">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Subscribe</h3>
+          <form action="#" method="POST">
+            <input type="email" class="w-full p-2 border rounded-lg mb-4" placeholder="Your Email" required />
+            <button type="submit" class="bg-[#285369] text-white px-4 py-2 rounded-lg hover:bg-gray-600">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-800 pt-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p class="text-gray-400 text-sm">© 2024 Copyrights by <a href="#" class="text-gray-200 underline">PT. Sinergi Prima Teknologi</a>. All Rights Reserved.</p>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gray-200"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gray-200"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
