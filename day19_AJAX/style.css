@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background-image: url("https://images.unsplash.com/photo-1500236861371-c749e9a06b46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(28, 18, 94, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.415);
+}
+
+.container label {
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+.container h2 {
+  font-weight: 400;
+}
+
+.container .rowocon {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.container .rowocon input {
+  height: 40px;
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  width: 300px;
+  background-color: rgba(27, 27, 27, 0.55);
+  border: none;
+  outline: none;
+}
+
+.container input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.container .rowocon button {
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  padding: 0px 23px;
+  border: none;
+  background-color: #1e9e5c;
+  color: white;
+}
+
+.container .rowocon button:hover {
+  background-color: #0a743d;
+}
+
+.alert {
+  color: #f0e6e6;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#savedWeatherData {
+  list-style-type: none;
+  padding: 0;
+  color: white;
+}
+
+#savedWeatherData li {
+  background-color: rgba(26, 144, 113, 0.4);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#savedWeatherData li button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#savedWeatherData li button:hover {
+  background-color: #c0392b;
+}
+
+.crud-buttons {
+  margin-top: 20px;
+}
+
+.crud-buttons button {
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  padding: 0px 23px;
+  border: none;
+  background-color: #1e9e5c;
+  color: white;
+  margin-right: 10px;
+}
+
+.crud-buttons button:hover {
+  background-color: #0a743d;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
