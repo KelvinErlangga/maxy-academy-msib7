@@ -1,0 +1,110 @@
+<template>
+  <div class="page" data-name="home" style="padding-bottom: 50px">
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title sliding">Celebra<span style="color: orange">tix</span></div>
+        <div class="right">
+          <a href="#" class="link icon-only panel-open" data-panel="right">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable page content -->
+    <div class="page-content">
+      <!-- Introduction Block -->
+      <div class="block">
+        <p>Selamat datang di aplikasi pemesanan tiket konser. Pilih konser favoritmu dan pesan tiket sekarang!</p>
+      </div>
+
+      <!-- Featured Concerts -->
+      <div class="block-title" style="text-align: center">Konser Populer</div>
+      <div class="block">
+        <div class="row">
+          <div class="col-50" style="text-align: center">
+            <a href="#" class="card">
+              <div class="card-header" style="text-align: center">Live Arena Festival 2024</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <img src="https://seremonia.id/wp-content/uploads/2024/09/458680340_483525507887798_1245799224497416850_n.jpg" alt="Live Arena Festival 2024" style="width: 100%; max-width: 400px" />
+                  <p>Tanggal: 30 September 2024</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-50" style="text-align: center">
+            <a href="#" class="card">
+              <div class="card-header" style="text-align: center">Konser Internasional Jakarta</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <img src="https://akcdn.detik.net.id/visual/2024/01/05/infografis-jadwal-konser-internasional-di-jakarta-paruh-pertama-2024.jpeg?w=400&q=90" alt="Konser Internasional Jakarta" style="width: 100%; max-width: 400px" />
+                  <p>Tanggal: 5 Oktober 2024</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concert Ticket Navigation -->
+      <div class="block-title">Pilih Konser</div>
+      <div class="block">
+        <div class="grid grid-cols-2 grid-gap">
+          <a href="/concert-tickets/" class="button button-fill">Lihat Tiket Konser</a>
+        </div>
+      </div>
+
+      <!-- Navigation to Other Pages -->
+      <div class="block-title">Navigation</div>
+      <div class="list list-strong inset list-dividers-ios">
+        <ul>
+          <li>
+            <a href="/about/" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">About</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/form/" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">Form</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Footer Block -->
+      <div class="block">
+        <p>Ikuti kami di media sosial untuk mendapatkan informasi terkini tentang konser dan acara lainnya!</p>
+        <div class="row">
+          <div class="col-33">
+            <a href="#" class="button button-fill">Facebook</a>
+          </div>
+          <div class="col-33">
+            <a href="#" class="button button-fill">Instagram</a>
+          </div>
+          <div class="col-33">
+            <a href="#" class="button button-fill">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default () => {
+    return $render;
+  };
+</script>
