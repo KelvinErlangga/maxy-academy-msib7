@@ -1,0 +1,49 @@
+<!-- form.f7 -->
+<div class="page" data-name="form">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="title">Book Tickets</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <form>
+      <div class="list no-hairlines-md">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Name</div>
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Your name">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Email</div>
+                <div class="item-input-wrap">
+                  <input type="email" placeholder="Your email">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Number of Tickets</div>
+                <div class="item-input-wrap">
+                  <input type="number" min="1" max="10" placeholder="Tickets">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="block">
+        <button class="button button-fill">Confirm Booking</button>
+      </div>
+    </form>
+  </div>
+</div>

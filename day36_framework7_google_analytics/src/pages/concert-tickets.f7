@@ -1,0 +1,115 @@
+<template>
+    <div class="page" data-name="concert-tickets">
+      <!-- Top Navbar -->
+      <div class="navbar">
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon f7-icons if-not-md">arrow_back</i>
+              <i class="icon material-icons if-md">arrow_back</i>
+            </a>
+          </div>
+          <div class="title">Daftar Tiket Konser</div>
+        </div>
+      </div>
+  
+      <!-- Scrollable page content-->
+      <div class="page-content" style="padding-bottom: 70px">
+        <!-- Concert Tickets List -->
+        <div class="block-title">Tiket Konser yang Tersedia</div>
+        <div class="list media-list">
+          <ul>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media"><img src="https://seremonia.id/wp-content/uploads/2024/09/458680340_483525507887798_1245799224497416850_n.jpg" width="80" /></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Live Arena Festival 2024</div>
+                  </div>
+                  <div class="item-subtitle">30 September 2024</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media"><img src="https://akcdn.detik.net.id/visual/2024/01/05/infografis-jadwal-konser-internasional-di-jakarta-paruh-pertama-2024.jpeg?w=400&q=90" width="80" /></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Konser Internasional Jakarta</div>
+                  </div>
+                  <div class="item-subtitle">5 Oktober 2024</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media"><img src="https://dewatiket.id/blog/wp-content/uploads/2024/09/Banner-Dewa-19-featuring-All-Stars-2.0.jpg" width="80" /></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Dewa 19 Allstar</div>
+                  </div>
+                  <div class="item-subtitle">18 Januari 2025</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFdQJnK2okawAOouQoRkQUGfWoGg4Iex59Gg&s" width="80" /></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">DE POPPIN RHYTM</div>
+                  </div>
+                  <div class="item-subtitle">5 Oktober 2024</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media"><img src="https://dewatiket.id/blog/wp-content/uploads/2024/09/Banner-Konser-Cinta-Istimewa.png" width="80" /></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Konser Cinta Istimewa</div>
+                  </div>
+                  <div class="item-subtitle">5 Oktober 2024</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt-i2KjN2bjHWMc7OLw8pI0KaRsEW3bs-uzA&s" width="80" /></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Sound of Downtown</div>
+                  </div>
+                  <div class="item-subtitle">6 Oktober 2024</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Footer Block -->
+        <div class="block">
+          <p>Ikuti kami di media sosial untuk mendapatkan informasi terkini tentang konser dan acara lainnya!</p>
+          <div class="row">
+            <div class="col-33">
+              <a href="#" class="button button-fill">Facebook</a>
+            </div>
+            <div class="col-33">
+              <a href="#" class="button button-fill">Instagram</a>
+            </div>
+            <div class="col-33">
+              <a href="#" class="button button-fill">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+    export default () => {
+      return $render;
+    };
+  </script>
+  
