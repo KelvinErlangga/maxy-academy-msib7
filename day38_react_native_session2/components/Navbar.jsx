@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from "react-native"; // Pastikan ActivityIndicator diimpor
+import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from "react-native";
 import { useFonts, Anton_400Regular } from "@expo-google-fonts/anton";
 
 const Navbar = ({ activeTab, setActiveTab }) => {
@@ -18,16 +18,19 @@ const Navbar = ({ activeTab, setActiveTab }) => {
 
   return (
     <View style={styles.navbar}>
+      {/* Link ke tab "About Me" */}
       <TouchableOpacity onPress={() => setActiveTab("AboutMe")} style={styles.navItem}>
         <Text style={[styles.navText, activeTab === "AboutMe" && styles.activeNavText]}>About Me</Text>
         {activeTab === "AboutMe" && <View style={styles.navIndicator} />}
       </TouchableOpacity>
 
+      {/* Link ke tab "Experience" */}
       <TouchableOpacity onPress={() => setActiveTab("Experience")} style={styles.navItem}>
         <Text style={[styles.navText, activeTab === "Experience" && styles.activeNavText]}>Experience</Text>
         {activeTab === "Experience" && <View style={styles.navIndicator} />}
       </TouchableOpacity>
 
+      {/* Link ke tab "Portfolio" */}
       <TouchableOpacity onPress={() => setActiveTab("Portfolio")} style={styles.navItem}>
         <Text style={[styles.navText, activeTab === "Portfolio" && styles.activeNavText]}>Portfolio</Text>
         {activeTab === "Portfolio" && <View style={styles.navIndicator} />}

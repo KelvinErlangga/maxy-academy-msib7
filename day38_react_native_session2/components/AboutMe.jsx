@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { View, Text, Image, ScrollView, StyleSheet, SafeAreaView, ActivityIndicator } from "react-native";
 import { useFonts, Anton_400Regular } from "@expo-google-fonts/anton";
 import { Poppins_400Regular, Poppins_700Bold } from "@expo-google-fonts/poppins";
-import ExperienceScreen from "./ExperienceScreen";
-import PortfolioScreen from "./PortfolioScreen";
-import Navbar from "../components/Navbar";
+import ExperienceScreen from "./Experience";
+import PortfolioScreen from "./Portfolio";
+import Navbar from "./Navbar";
 
 export default function AboutMeScreen() {
   const [activeTab, setActiveTab] = useState("AboutMe");

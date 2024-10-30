@@ -1,5 +1,6 @@
+// Import React dan komponen dari React Native
 import React from "react";
-import { View, Text, Image, ScrollView, StyleSheet, SafeAreaView, Dimensions, ActivityIndicator, Linking, TouchableOpacity } from "react-native";
+import { View, Text, Image, ScrollView, StyleSheet, SafeAreaView, ActivityIndicator, Linking, TouchableOpacity } from "react-native";
 import { useFonts, Anton_400Regular } from "@expo-google-fonts/anton";
 import { Poppins_400Regular, Poppins_700Bold } from "@expo-google-fonts/poppins";
 
@@ -11,6 +12,7 @@ export default function PortfolioScreen() {
     Poppins_700Bold,
   });
 
+  // Jika font belum ter-load, tampilkan loading
   if (!fontsLoaded) {
     return (
       <View style={styles.loadingContainer}>
@@ -22,12 +24,11 @@ export default function PortfolioScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        {/* Portfolio Banner Section */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>PORTFOLIO</Text>
           <View style={styles.line} />
 
-          {/* Go Up Leuwimalang Section */}
+          {/* Section Go Up Leuwimalang */}
           <Text style={styles.projectTitle}>Go Up Leuwimalang</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.imageScroll}>
             <Image source={require("../assets/images/portfolio1/gul1.png")} style={styles.projectImage} />
@@ -42,7 +43,7 @@ export default function PortfolioScreen() {
             <Image source={require("../assets/images/portfolio1/gul10.png")} style={styles.projectImage} />
           </ScrollView>
 
-          {/* Website and Source Code Links */}
+          {/* Link ke Website dan Source Code */}
           <View style={styles.linkContainer}>
             <TouchableOpacity onPress={() => Linking.openURL("https://go-up-leuwimalang.vercel.app/")}>
               <Text style={styles.linkText}>View Website</Text>
@@ -53,7 +54,7 @@ export default function PortfolioScreen() {
           </View>
         </View>
 
-        {/* Vinstay Section */}
+        {/* Section Vinstay */}
         <View style={styles.section}>
           <Text style={styles.projectTitle}>Vinstay</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.imageScroll}>
@@ -62,10 +63,9 @@ export default function PortfolioScreen() {
             <Image source={require("../assets/images/portfolio2/vinstay3.png")} style={styles.projectImage} />
             <Image source={require("../assets/images/portfolio2/vinstay4.png")} style={styles.projectImage} />
             <Image source={require("../assets/images/portfolio2/vinstay5.png")} style={styles.projectImage} />
-            {/* Add other images here */}
           </ScrollView>
 
-          {/* Website and Source Code Links */}
+          {/* Link ke Website dan Source Code */}
           <View style={styles.linkContainer}>
             <TouchableOpacity onPress={() => Linking.openURL("https://example-vinstaywebsite.com")}>
               <Text style={styles.linkText}>View Website</Text>
@@ -75,8 +75,8 @@ export default function PortfolioScreen() {
             </TouchableOpacity>
           </View>
         </View>
-        
-        {/* Cinevibes Section */}
+
+        {/* Section Cinevibes */}
         <View style={styles.section}>
           <Text style={styles.projectTitle}>Cinevibes</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.imageScroll}>
@@ -84,15 +84,38 @@ export default function PortfolioScreen() {
             <Image source={require("../assets/images/portfolio3/cinevibes2.png")} style={styles.projectImage} />
             <Image source={require("../assets/images/portfolio3/cinevibes3.png")} style={styles.projectImage} />
             <Image source={require("../assets/images/portfolio3/cinevibes4.png")} style={styles.projectImage} />
-            {/* Add other images here */}
           </ScrollView>
 
-          {/* Website and Source Code Links */}
+          {/* Link ke Website dan Source Code */}
           <View style={styles.linkContainer}>
             <TouchableOpacity onPress={() => Linking.openURL("https://example-vinstaywebsite.com")}>
               <Text style={styles.linkText}>View Website</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => Linking.openURL("https://github.com/KelvinErlangga/website-pemesanan-tempat-tinggal-online")}>
+            <TouchableOpacity onPress={() => Linking.openURL("https://github.com/KelvinErlangga/maxy-academy-msib7/tree/master")}>
+              <Text style={styles.linkText}>View Source Code</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Section SPT */}
+        <View style={styles.section}>
+          <Text style={styles.projectTitle}>PT. Sinergi Prima Teknologi</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.imageScroll}>
+            <Image source={require("../assets/images/portfolio4/spt1.png")} style={styles.projectImage} />
+            <Image source={require("../assets/images/portfolio4/spt2.png")} style={styles.projectImage} />
+            <Image source={require("../assets/images/portfolio4/spt3.png")} style={styles.projectImage} />
+            <Image source={require("../assets/images/portfolio4/spt4.png")} style={styles.projectImage} />
+            <Image source={require("../assets/images/portfolio4/spt5.png")} style={styles.projectImage} />
+            <Image source={require("../assets/images/portfolio4/spt6.png")} style={styles.projectImage} />
+            <Image source={require("../assets/images/portfolio4/spt7.png")} style={styles.projectImage} />
+          </ScrollView>
+
+          {/* Link ke Website dan Source Code */}
+          <View style={styles.linkContainer}>
+            <TouchableOpacity onPress={() => Linking.openURL("https://example-vinstaywebsite.com")}>
+              <Text style={styles.linkText}>View Website</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => Linking.openURL("https://github.com/KelvinErlangga/maxy-academy-msib7/tree/main/day18_tailwindcss")}>
               <Text style={styles.linkText}>View Source Code</Text>
             </TouchableOpacity>
           </View>
@@ -140,8 +163,8 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   projectImage: {
-    width: 460, // Adjust this value to control image width
-    height: 230, // Adjust this value to control image height
+    width: 460,
+    height: 230,
     resizeMode: "cover",
     marginRight: 15,
     borderRadius: 10,
